@@ -1,0 +1,124 @@
+.title-section {
+        height: 102px;	
+        width: 1440px;	
+        background-color: #DEDEDE;	
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+}
+.home-dashboard {
+    height: 18px;	
+    width: 102px;	
+    color: #8E44AD;	
+    font-size: 12px;	
+    line-height: 15px;
+    padding-top: 10px;
+}
+.users-list {
+    height: 44px;	
+    width: 136px;	
+    color: #34495E;	
+    font-size: 30px;	
+    line-height: 35px;
+}
+.new-user-button {
+    height: 40px;	
+    width: 115px;	
+    border-radius: 20px;	
+    background-color: #8E44AD;	
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    color: #FFFFFF;	
+    font-size: 15px;	
+    line-height: 18px;
+}
+.list-table-section {
+    height: 100%;	
+    width: 1170px;	
+    border-radius: 10px;	
+    background-color: #FFFFFF;	
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    margin-top: 20px;
+    overflow-y: auto;
+}
+.user-list-row {
+    height: 85px;	
+    width: 1140px;	
+    border-radius: 10px;	
+    background-color: #FFFFFF;
+}
+.user-list-row:hover {	
+    background-color: rgba(142,68,173,0.05);
+}
+.user-table-head {
+    height: 18px;	
+    width: 25px;	
+    color: #7F8C8D;	
+    font-size: 12px;	
+    line-height: 15px;
+}
+.rounded-user-image {
+    border-radius: 25%;
+    margin-right: 10px;
+}
+.username-style {
+    height: 22px;	
+    color: #34495E;	
+    font-size: 15px;	
+    line-height: 18px;
+}
+.user-action-icon {
+    color: #8E44AD;
+    margin-right: 8px;
+}
+.modal-content {
+    border: none;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #8E44AD;
+    border-color: #8E44AD;
+}
+.save-edit-button {
+    margin-top: 10px;
+    height: 40px;	
+    width: 120px;	
+    border-radius: 20px;	
+    background-color: #8E44AD;	
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+}
+.cancel-button {
+    margin-top: 10px;
+    height: 40px;	
+    width: 120px;	
+    border: 1px solid #8E44AD !important;	
+    border-radius: 20px;	
+    background-color: #F5F5F5;	
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+}
+.cancel-text {
+    height: 22px;	
+    width: 47px;	
+    color: #8E44AD;	
+    font-size: 15px;	
+    line-height: 18px;
+}
+.save-text {
+    height: 22px;	
+    width: 28px;	
+    color: #FFFFFF;	
+    font-size: 15px;	
+    line-height: 18px;
+}
+.are-you-sure {	
+    height: 22px;	
+    width: 209px;	
+    color: #7F8C8D;	
+    font-size: 15px;	
+    line-height: 18px;
+    white-space: nowrap;
+}
+.username {
+    text-align: center;
+    height: 22px;	
+    color: #34495E;	
+    font-size: 15px;	
+    line-height: 18px;
+}

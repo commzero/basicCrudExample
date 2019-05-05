@@ -1,0 +1,32 @@
+<app-navbar-component [page]="'home'"></app-navbar-component>
+<div class="container">
+  <div class="row text-center card-style">
+    <div class="col-md-6 left-side-card"></div>
+    <div class="col-md-6 text-left">
+      <form [formGroup]="loginForm">
+        <div class="right-side-card">
+          <h4 class="welcome-back">Welcome back!</h4>
+          <h6 class="please-login">Please login to access your <span class="spaces">Spaces</span> Dashboard</h6>
+          <div
+            *ngIf="(loginForm.get('username').touched || loginForm.get('password').touched) && (loginForm.get('username').invalid || loginForm.get('password').invalid) || invalidLogin"
+            class="alert alert-danger" role="alert">
+            <p>{{ message }}</p>
+          </div>
+          <p class="username-password-text">Username</p>
+          <input formControlName="username" type="text" class="input-style" placeholder="Username...">
+          <p class="username-password-text">Password</p>
+          <input formControlName="password" type="password" class="input-style" placeholder="********">
+          <div class="row">
+            <div class="col-md-6">
+              <p style="cursor:pointer;" (click)="onForgotPassword()" class="forgot-password">Forgot password?</p>
+            </div>
+            <div class="col-md-6">
+              <button (click)="onLogin()" [disabled]="!loginForm.valid" class="login-button btn"><span
+                  class="login">Login</span></button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

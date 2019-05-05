@@ -1,0 +1,70 @@
+<app-navbar-component [page]="'users'"></app-navbar-component>
+<section class="title-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="home-dashboard"><span style="cursor:pointer;" (click)="onClickHome()">Home </span>/
+          <span>Dashboard</span></p>
+      </div>
+      <div class="col-md-6">
+        <span class="users-list">Users List</span>
+      </div>
+      <div class="col-md-6 text-right">
+        <button (click)="onOpenAddEditModal()" class="btn new-user-button"><i class="fas fa-plus"></i> New User</button>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div (scrolled)="onScrollDown()" infinite-scroll infiniteScrollContainer class="col-md-12 list-table-section">
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="user-table-head">User</th>
+              <th class="user-table-head">Title</th>
+              <th class="user-table-head text-right">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users; let i = index;" class="user-list-row">
+              <td>
+                <img alt="None" width="30" class="rounded-user-image" src="{{user.image}}">
+                <span class="username-style">{{ user.name }}</span>
+              </td>
+              <td class="username-style">{{ user.title }}</td>
+              <td class="text-right">
+                <i style="cursor:pointer;" (click)="onOpenAddEditModal(user)" class="far fa-edit user-action-icon"></i>
+                <i style="cursor:pointer;" (click)="onDeleteUser(template, user)"
+                  class="fas fa-trash user-action-icon"></i>
+                <i style="cursor:pointer;" class="fas fa-arrow-right user-action-icon"></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h6 class="text-center username-style" *ngIf="loading">Loading...</h6>
+      </div>
+    </div>
+  </div>
+</section>
+<ng-template #template>
+  <div role="document" class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <p class="are-you-sure">Are you sure you want to delete?</p>
+        <p class="username text-center">{{ userName }}</p>
+        <div class="row">
+          <div class="col-md-6">
+            <button type="button" class="btn cancel-button" (click)="modalRef.hide()"><span
+                class="cancel-text">No</span></button>
+          </div>
+          <div class="col-md-6">
+            <button type="button" class="btn save-edit-button" (click)="deleteUser()"><span
+                class="save-text">Yes</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

@@ -1,0 +1,34 @@
+<div [formGroup]="usersForm" class="group-content">
+  <div class="profile-grup">
+    <div class="cover-profile">
+      <div class="image-paralax"></div>
+      <div class="profile">
+        <div class="profile-image">
+          <img (click)="onUploadInput()" *ngIf="!usersForm.value.image"
+            src="https://pbs.twimg.com/media/ClYa7kZUgAEC_V0.jpg" alt="">
+          <img (click)="onUploadInput()" *ngIf="usersForm.value.image" src="{{ usersForm.value.image }}" alt="">
+        </div>
+        <div class="profile-data">
+          <input id="uploadInput" hidden type="file" accept="*" (change)="uploadPhoto($event)">
+          <p class="input-text-style">Name:</p>
+          <input class="input-style" type="text" placeholder="Name..." formControlName="name">
+          <p class="input-text-style">Job title:</p>
+          <input class="input-style" type="text" placeholder="Job title..." formControlName="title">
+          <div class="alert-danger">*one or more field are empty</div>
+          <div class="row">
+            <div class="col-md-6">
+              <button (click)="modal.hide()" class="btn cancel-button"><span class="cancel-text">Cancel</span></button>
+            </div>
+            <div *ngIf="usersForm.value.id > 0" class="col-md-6">
+              <button (click)="onSaveUser()" class="btn save-edit-button"><span class="save-text">Save</span></button>
+            </div>
+            <div *ngIf="usersForm.value.id == 0" class="col-md-6">
+              <button (click)="onAddUser()" [disabled]="!usersForm.valid" class="btn save-edit-button"><span
+                  class="save-text">Add</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+.navbar-position-placement {	
+    height: 70px;	
+    width: 1440px;	
+    background-color: #FFFFFF;	
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+}
+.login-button-style {
+    height: 40px;	
+    width: 94px;	
+    border-radius: 20px;	
+    background-color: #8E44AD;	
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+}
+.login-text {
+    height: 22px;	
+    width: 44px;	
+    color: #FFFFFF;	
+    font-size: 15px;	
+    line-height: 18px;
+}
+.nav-text {
+    height: 22px;	
+    width: 43px;	
+    color: #34495E;	
+    font-size: 15px;	
+    line-height: 18px;
+}
+.margin-left-170 {
+    margin-left: 170px;
+}
+.padding-right-40 {
+    padding-right: 40px !important;
+}
+.padding-right-75 {
+    padding-right: 75px !important;
+}
